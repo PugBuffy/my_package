@@ -13,7 +13,7 @@ find_package(rclcpp REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(example_interfaces REQUIRED)
 
-add_executable(main_node src/main_pub.cpp src/test_pub.cpp)
+add_executable(main_node src/main_pub.cpp src/my_node.cpp)
 ament_target_dependencies(main_node rclcpp std_msgs) 
 
 add_executable(msg_pub src/msg_pub.cpp)
