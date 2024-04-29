@@ -13,7 +13,7 @@ namespace my_node_namespace
     void MyNode::callback(const std_msgs::msg::String& object)
     {
         auto msg = std_msgs::msg::String();
-        msg.data = "Hello " + object.data;
+        msg.data = "Hello " + object.data + "!";
 
         RCLCPP_INFO(this->get_logger(), msg.data.c_str());
         publisher->publish(msg);
