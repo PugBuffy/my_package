@@ -38,7 +38,6 @@ install(TARGETS
 install(DIRECTORY
   launch
   config
-  tiles
   DESTINATION share/${PROJECT_NAME}
 )
 
