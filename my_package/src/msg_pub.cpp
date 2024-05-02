@@ -13,15 +13,12 @@ class MsgPublisher : public rclcpp::Node
     public:
         MsgPublisher() : Node("msg_pub")
         {  
-           this->declare_parameter("config_file", "default"); 
            this->declare_parameter("msg", "world");
 
            publisher = this->create_publisher<std_msgs::msg::String>("/message", 10);
            timer = this->create_wall_timer(500ms, std::bind(&MsgPublisher::topic_callback, this));
 
-           std::string config_file = this->get_parameter("config_file").get_parameter_value().get<std::string>();
-
-           RCLCPP_INFO(this->get_logger(), "Start sending... '%s'", config_file.c_str());
+           RCLCPP_INFO(this->get_logger(), "Start sending...");
         }   
     
     private:

@@ -16,7 +16,7 @@ def generate_launch_description():
     msg_publisher = Node(   
         package="my_package", 
         executable="msg_pub",
-        parameters=[{"config_file":config_file}, config_file]
+        parameters=[config_file]
     )
 
     my_node = Node(
