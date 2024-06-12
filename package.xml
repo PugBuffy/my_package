@@ -13,8 +13,7 @@
 
   <depend>rclcpp</depend>
   <depend>std_msgs</depend>
-  <depend>nav_msgs</depend>
-  <depend>example_interfaces</depend>
+
 
   <exec_depend>launch_ros</exec_depend>
 
