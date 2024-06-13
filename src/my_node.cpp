@@ -1,4 +1,5 @@
 #include "my_package/my_node.hpp"
+#include "../my_lib/include/funcs.hpp"
 
 using namespace std::placeholders;
 
@@ -15,7 +16,7 @@ namespace my_node_namespace
         auto msg = std_msgs::msg::String();
         msg.data = "Hello " + object.data + "!";
 
-        RCLCPP_INFO(this->get_logger(), msg.data.c_str());
+        RCLCPP_INFO(this->get_logger(),  "my func = and %d message %s", sum(5, 10), msg.data.c_str());
         publisher->publish(msg);
     }
 }
