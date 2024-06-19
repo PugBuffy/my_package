@@ -1,5 +1,5 @@
 #include "my_package/my_node.hpp"
-#include "../my_lib/include/funcs.hpp"
+#include "funcs.hpp"
 
 using namespace std::placeholders;
 
