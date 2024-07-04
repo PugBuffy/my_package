@@ -14,7 +14,7 @@ namespace my_node_namespace
             MyNode();
 
         private:
-            void callback(const std_msgs::msg::String &msg);
+            void callback(const std_msgs::msg::String::SharedPtr msg);
             rclcpp::TimerBase::SharedPtr timer;
             rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher;
             rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscriber;

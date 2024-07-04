@@ -1,4 +1,4 @@
-#include "my_package/my_node.hpp"
+#include "my_node.hpp"
 
 int main(int argc, char * argv[])
 {

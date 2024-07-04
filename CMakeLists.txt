@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.8)
-project(my_package)
+project(new_package)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-include_directories(include)
+include_directories(include/${PROJECT_NAME})
 
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
